@@ -10,7 +10,7 @@ is here and how to make simple changes.
 
 ## The live website
 
-    https://codesisyphus.github.io/law-student-hiring-resolution/
+    https://legal-recruiting-timeline-initiative.github.io/law-student-hiring-resolution/
 
 This is the address the pamphlet's QR code opens. It updates automatically a minute or two
 after any change is saved here.

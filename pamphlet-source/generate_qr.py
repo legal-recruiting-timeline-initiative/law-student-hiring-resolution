@@ -9,9 +9,11 @@ Requires: pip install "qrcode[pil]"
 """
 import qrcode
 
-URL = "https://codesisyphus.github.io/law-student-hiring-resolution/"
+URL = "https://legal-recruiting-timeline-initiative.github.io/law-student-hiring-resolution/"
 
-qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=12, border=2)
+# border=4 is the QR spec's minimum quiet zone; a longer URL needs more modules,
+# and a thinner quiet zone starts failing scans at higher module counts.
+qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=12, border=4)
 qr.add_data(URL)
 qr.make(fit=True)
 qr.make_image(fill_color="#12294a", back_color="white").save("qr_site.png")
