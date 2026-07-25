@@ -21,11 +21,14 @@ Think of this repository as a shared folder. Here is what each part is:
 
 | Folder or file | What it is | Can I edit it easily? |
 | --- | --- | --- |
-| `index.html` | The website's main page (what the QR code opens) | Yes, see "Editing the website" below |
-| `resolution.html` | The website's full-resolution page (text, coalition, sources) | Yes, same as above |
-| `documents/` | Ready-to-use files: the printable pamphlet and the resolution draft | These are finished files, download and use them |
+| `index.html` | The website's main page (what the QR code opens). Its main button links directly to `documents/Resolution - DRAFT.pdf`, the complete, unaltered resolution and report | Yes, see "Editing the website" below |
+| `documents/` | Ready-to-use files: the printable pamphlet and the resolution draft (the full resolution, report, and addenda) | These are finished files, download and use them |
 | `pamphlet-source/` | The editable "template" the pamphlet is built from, for a technical helper | Editing here needs some setup, see that folder's guide |
 | `assets/` | A copy of the pamphlet the website links to (leave this one alone) | Do not rename |
+
+The site intentionally links straight to the PDF for the full resolution and report,
+rather than reproducing the text on a web page, so nothing about the filed document can be
+transcribed incorrectly or look altered.
 
 ### The `documents/` folder holds
 
@@ -37,8 +40,7 @@ Think of this repository as a shared folder. Here is what each part is:
 
 You can change the words on the website right here in your browser:
 
-1. Open the file you want to change (`index.html` for the main page, `resolution.html` for
-   the full page). Click its name in the file list above.
+1. Open `index.html` (the main page). Click its name in the file list above.
 2. Click the **pencil icon** (top right of the file) to edit.
 3. Make your change. The text is surrounded by tags that look like `<p>...</p>`. Just edit
    the words between the tags and leave the tags alone.
