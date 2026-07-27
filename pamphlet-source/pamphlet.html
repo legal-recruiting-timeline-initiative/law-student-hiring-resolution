@@ -4,101 +4,242 @@
 <meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  @page { size: A4; margin: 10mm 13mm 8mm 13mm; }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    font-family: "Georgia", "Times New Roman", serif;
-    color: #212a37; font-size: 11pt; line-height: 1.38;
+  :root {
+    --chamber: #e8f1fb;
+    --ink: #14263f;
+    --ink-soft: #3a4f6a;
+    --muted: #5d7190;
+    --line: #c5d6ea;
+    --line-soft: #dde8f4;
+    --pine: #1f5fae;
+    --pop: #c45a24;
+    --serif: "Newsreader", "Times New Roman", Times, serif;
+    --sans: "Outfit", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-  .sans { font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; }
 
-  /* masthead */
-  .topbar {
-    display: flex; justify-content: space-between; align-items: baseline;
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-    font-size: 8.4pt; letter-spacing: .09em; text-transform: uppercase;
-    color: #8a6a2e; font-weight: 700;
-    border-bottom: 1.5pt solid #1c2a39; padding-bottom: 5pt; margin-bottom: 12pt;
+  @page { size: A4; margin: 7mm 8mm 6.5mm; }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    font-size: 11.25pt;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-  .topbar .r { color: #55617a; }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 8pt;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--muted);
+    border-bottom: 1pt solid var(--ink);
+    padding-bottom: 6pt;
+  }
+  .topbar .mark { color: var(--ink); font-weight: 600; }
+
+  .rule {
+    width: 28pt;
+    height: 2.5pt;
+    background: var(--pop);
+    margin: 12pt 0 11pt;
+  }
 
   h1 {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 26pt; line-height: 1.05; margin: 2pt 0 3pt 0; color: #1c2a39;
-    letter-spacing: -0.005em; font-weight: 700;
+    font-family: var(--serif);
+    font-size: 23.5pt;
+    line-height: 1.08;
+    margin: 0 0 5pt;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+    font-weight: 600;
   }
-  .subtitle { font-size: 11.5pt; color: #4a5468; font-style: italic; margin-bottom: 13pt; }
 
-  /* Ask box */
+  .subtitle {
+    font-size: 11.5pt;
+    color: var(--ink-soft);
+    margin: 0 0 14pt;
+  }
+
   .ask {
-    border: 1.4pt solid #1c2a39; border-left: 7pt solid #b0883b;
-    background: #faf6ec; padding: 12pt 15pt 11pt 15pt; margin-bottom: 11pt; border-radius: 2pt;
+    background: var(--chamber);
+    padding: 12pt 14pt 11pt;
+    margin-bottom: 14pt;
   }
   .ask .kicker {
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-weight: 800;
-    font-size: 9pt; letter-spacing: .13em; text-transform: uppercase; color: #8a6a2e; margin-bottom: 5pt;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 9.2pt;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--pop);
+    margin: 0 0 5pt;
   }
-  .ask p { margin: 0 0 6pt 0; font-size: 11.4pt; line-height: 1.4; }
-  .ask ol { margin: 5pt 0 0 0; padding-left: 18pt; }
-  .ask li { margin-bottom: 4pt; font-size: 11pt; }
+  .ask > p {
+    margin: 0 0 5pt;
+    font-family: var(--sans);
+    font-size: 11.1pt;
+    line-height: 1.4;
+    color: var(--ink-soft);
+  }
+  .ask ol { margin: 3pt 0 0; padding-left: 17pt; }
+  .ask li {
+    margin-bottom: 4pt;
+    font-family: var(--sans);
+    font-size: 11pt;
+    line-height: 1.38;
+    color: var(--ink);
+  }
   .ask li:last-child { margin-bottom: 0; }
+  .ask li b {
+    font-family: var(--sans);
+    font-weight: 700;
+  }
 
-  /* stats */
-  .stats { display: flex; gap: 9pt; margin-bottom: 11pt; }
-  .stat { flex: 1; text-align: center; background: #1c2a39; color: #fff; border-radius: 3pt; padding: 9pt 6pt 8pt 6pt; }
-  .stat .n { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 22pt; line-height: 1; display: block; }
-  .stat .l { font-size: 8.2pt; line-height: 1.22; display: block; margin-top: 5pt; color: #cdd8ea; }
-  .stat.gold { background: #8a6a2e; }
-  .stat.gold .l { color: #ecdcc0; }
+  .stats {
+    display: flex;
+    border-top: 1pt solid var(--ink);
+    border-bottom: 1pt solid var(--ink);
+    padding: 12pt 0;
+    margin-bottom: 14pt;
+  }
+  .stat {
+    flex: 1;
+    padding-right: 11pt;
+    border-right: 1pt solid var(--line);
+    margin-right: 11pt;
+  }
+  .stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  .stat .n {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 21pt;
+    line-height: 1;
+    display: block;
+    letter-spacing: -0.02em;
+    color: var(--pine);
+  }
+  .stat .l {
+    font-size: 8.9pt;
+    line-height: 1.32;
+    display: block;
+    margin-top: 5pt;
+    color: var(--muted);
+    max-width: 26ch;
+  }
 
   h2.section {
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-size: 9.6pt;
-    letter-spacing: .11em; text-transform: uppercase; color: #8a6a2e;
-    border-bottom: 1pt solid #d9cfba; padding-bottom: 4pt; margin: 0 0 9pt 0; font-weight: 800;
+    font-family: var(--serif);
+    font-size: 13pt;
+    color: var(--ink);
+    border-bottom: 1pt solid var(--line);
+    padding-bottom: 4pt;
+    margin: 0 0 9pt;
+    font-weight: 600;
   }
 
-  /* concerns as 2x2 grid */
-  .concerns { display: flex; flex-wrap: wrap; gap: 9pt 18pt; margin-bottom: 11pt; }
-  .concern { flex: 0 0 calc(50% - 9pt); }
+  .concerns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12pt 16pt;
+    margin-bottom: 14pt;
+  }
+  .concern { flex: 0 0 calc(50% - 8pt); }
   .concern .h {
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-weight: 800;
-    font-size: 10.2pt; color: #1c2a39;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 11.2pt;
+    color: var(--ink);
+    margin: 0 0 3pt;
   }
-  .concern .h .num { color: #b0883b; }
-  .concern p { margin: 2pt 0 0 0; font-size: 10pt; line-height: 1.34; }
+  .concern .h .num { color: var(--pop); margin-right: 2pt; }
+  .concern p {
+    margin: 0;
+    font-size: 10.5pt;
+    line-height: 1.4;
+    color: var(--ink-soft);
+  }
 
-  /* credibility */
-  .cred { background: #faf6ec; border: 1pt solid #d9cfba; border-radius: 3pt; padding: 10pt 14pt; margin-bottom: 11pt; }
-  .cred p { margin: 0; font-size: 9.8pt; line-height: 1.42; color: #2a3446; }
-  .cred b { color: #1c2a39; }
+  .cred p {
+    margin: 0;
+    font-size: 10.3pt;
+    line-height: 1.48;
+    color: var(--ink-soft);
+  }
+  .cred b { color: var(--ink); font-weight: 600; }
 
-  /* CTA */
-  .cta { display: flex; align-items: center; gap: 15pt; border-top: 1.5pt solid #1c2a39; padding-top: 9pt; }
-  .cta .qr { width: 82pt; height: 82pt; flex: 0 0 auto; }
-  .cta .qr img { width: 82pt; height: 82pt; display: block; }
-  .cta .txt { flex: 1; }
-  .cta .vote { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 16pt; color: #1c2a39; margin: 0 0 3pt 0; }
-  .cta .sub { font-size: 9.4pt; color: #4a5468; margin: 0 0 4pt 0; line-height: 1.35; }
-  .cta .contact { font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-size: 8.4pt; color: #55617a; line-height: 1.4; }
-  .cta .contact b { color: #1c2a39; }
-  .cta .sub a { color: #8a6a2e; font-weight: 700; text-decoration: underline; }
+  .fill {
+    height: 8mm;
+  }
 
-  .sources { font-size: 7.6pt; color: #6a7284; line-height: 1.4; margin-top: 8pt; }
-  .sources b { color: #1c2a39; }
+  .cta {
+    display: flex;
+    align-items: center;
+    gap: 14pt;
+    border-top: 1pt solid var(--ink);
+    padding-top: 12pt;
+    margin-top: 0;
+  }
+  .cta .qr { width: 84pt; height: 84pt; flex: 0 0 84pt; }
+  .cta .qr img { width: 84pt; height: 84pt; display: block; }
+  .cta .txt { flex: 1; min-width: 0; }
+  .cta .vote {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 16pt;
+    color: var(--ink);
+    margin: 0 0 4pt;
+  }
+  .cta .sub {
+    font-size: 9.4pt;
+    color: var(--ink-soft);
+    margin: 0 0 5pt;
+    line-height: 1.38;
+  }
+  .cta .sub a {
+    color: var(--pine);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 1.5pt;
+  }
+  .cta .contact {
+    font-size: 8.2pt;
+    color: var(--muted);
+    line-height: 1.38;
+    margin: 0;
+  }
+  .cta .contact b { color: var(--ink); font-weight: 600; }
+
+  .sources {
+    font-size: 7.2pt;
+    color: var(--muted);
+    line-height: 1.38;
+    margin-top: 8pt;
+    padding-top: 6pt;
+    border-top: 1pt solid var(--line-soft);
+  }
+  .sources b { color: var(--ink-soft); font-weight: 600; }
 </style>
 </head>
 <body>
 
 <div class="topbar">
-  <span>A Resolution Before the ABA House of Delegates</span>
-  <span class="r">Annual Meeting &middot; Chicago &middot; 2026</span>
+  <span class="mark">Bar Association of the District of Columbia</span>
+  <span>ABA Annual Meeting &middot; Chicago &middot; 2026</span>
 </div>
-
+<div class="rule" aria-hidden="true"></div>
 <h1>Let Law Students Become Law Students First</h1>
-<div class="subtitle">A resolution on accelerated law-firm recruiting.</div>
+<p class="subtitle">A resolution on accelerated law-firm recruiting, before the ABA House of Delegates.</p>
 
 <div class="ask">
   <div class="kicker">What we ask you to adopt</div>
@@ -111,7 +252,7 @@
 
 <div class="stats">
   <div class="stat"><span class="n">85%</span><span class="l">of 2L summer offers now made before July of the 1L year, up from 34% a year earlier</span></div>
-  <div class="stat gold"><span class="n">80%</span><span class="l">of offers now come through employer-sponsored recruiting, not on-campus interviews</span></div>
+  <div class="stat"><span class="n">80%</span><span class="l">of offers now come through employer-sponsored recruiting, not on-campus interviews</span></div>
   <div class="stat"><span class="n">18</span><span class="l">law-school student governments asked the ABA to act</span></div>
 </div>
 
@@ -139,11 +280,13 @@
   <p><b>The students asked first.</b> On January 1, 2026, student governments at 18 law schools (Columbia, Cornell, Duke, Georgetown, Harvard, Michigan, Northwestern, NYU, Penn, Stanford, Texas, UC Berkeley, UCLA, Chicago, Virginia, Vanderbilt, WashU, and Yale) jointly asked the ABA to review accelerating recruitment, several backed by student polls showing supermajority support. <b>Sponsored by the Bar Association of the District of Columbia, with a coalition of law schools.</b> Approved by the BADC Board of Directors and recommended by its Young Lawyers Section; the drafters are aware of no opposition.</p>
 </div>
 
+<div class="fill" aria-hidden="true"></div>
+
 <div class="cta">
   <div class="qr"><img src="qr_site.png" alt="QR code to resolution website"></div>
   <div class="txt">
-    <p class="vote">Please vote to ADOPT.</p>
-    <p class="sub">Scan for the full resolution, the report, the data, the coalition, and sources, at <a class="sans" href="https://legal-recruiting-timeline-initiative.github.io/law-student-hiring-resolution/">legal-recruiting-timeline-initiative.github.io/law-student-hiring-resolution</a></p>
+    <p class="vote">Please vote to adopt.</p>
+    <p class="sub">Scan for the full resolution, the report, the data, the coalition, and sources, at <a href="https://legal-recruiting-timeline-initiative.github.io/law-student-hiring-resolution/">legal-recruiting-timeline-initiative.github.io/law-student-hiring-resolution</a></p>
     <p class="contact"><b>Contacts:</b> Philippe Lin, plin@vasquezlawdc.com &middot; (812) 345-7083 &nbsp;|&nbsp; Lorie Masters, lmasters@hunton.com &middot; (202) 595-4600</p>
   </div>
 </div>

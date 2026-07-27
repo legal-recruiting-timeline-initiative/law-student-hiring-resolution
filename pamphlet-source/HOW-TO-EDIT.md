@@ -9,27 +9,41 @@ computer. If that is not you, hand this folder to a technical helper.
 
 - `pamphlet.html` - the pamphlet template. This is where the words, layout, and colors live.
 - `qr_site.png` - the QR code image embedded in the pamphlet.
-- `render_pamphlet.py` - the script that turns `pamphlet.html` into a PDF.
+- `render_pamphlet.sh` - the simplest rebuild script (uses Google Chrome).
+- `render_pamphlet.py` - alternate rebuild script (WeasyPrint, or Chrome fallback).
 - `generate_qr.py` - the script that regenerates the QR code (only needed if the website
   address changes).
 
 ## One-time setup (Mac)
 
-Install the tools the build needs:
+You need either Google Chrome (simplest) or WeasyPrint:
+
+**Option A — Chrome (recommended if you already have it)**  
+No extra install. The render script will use headless Chrome automatically.
+
+**Option B — WeasyPrint**
 
     brew install pango
-    pip install weasyprint "qrcode[pil]"
+    pip install weasyprint
 
 (`brew` is Homebrew, from https://brew.sh. `pip` comes with Python.)
+
+To regenerate the QR code later, also install:
+
+    pip install "qrcode[pil]"
 
 ## To change the pamphlet's words or design
 
 1. Edit `pamphlet.html`. The text is plain and readable; change the words you want.
 2. Rebuild the PDF:
 
+       ./render_pamphlet.sh
+
+   Or, if you prefer Python and have WeasyPrint set up:
+
        python render_pamphlet.py
 
-   This writes a new `Pamphlet.pdf` in this folder.
+   Either command writes a new `Pamphlet.pdf` in this folder.
 3. Review the new `Pamphlet.pdf`. When it looks right, use it to replace the two copies in
    the repository:
    - `documents/Pamphlet - A4 color (print this).pdf`
@@ -49,7 +63,7 @@ address (for example, a different repository name or a custom domain).
    This rewrites `qr_site.png`.
 3. Rebuild the pamphlet so it picks up the new QR:
 
-       python render_pamphlet.py
+       ./render_pamphlet.sh
 
 4. Replace the pamphlet PDFs as described above, and reprint the pamphlet.
 
