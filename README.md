@@ -21,8 +21,8 @@ Think of this repository as a shared folder. Here is what each part is:
 
 | Folder or file | What it is | Can I edit it easily? |
 | --- | --- | --- |
-| `index.html` | The website's main page (what the QR code opens). Its main button links directly to `documents/Resolution - DRAFT.pdf`, the complete, unaltered resolution and report | Yes, see "Editing the website" below |
-| `documents/` | Ready-to-use files: the printable pamphlet and the resolution draft (the full resolution, report, and addenda) | These are finished files, download and use them |
+| `index.html` | The website's main page (what the QR code opens). Its main button links directly to `documents/Resolution.pdf`, the complete, unaltered resolution and report | Yes, see "Editing the website" below |
+| `documents/` | Ready-to-use files: the printable pamphlet and the resolution (the full resolution, report, and addenda) | These are finished files, download and use them |
 | `pamphlet-source/` | The editable "template" the pamphlet is built from, for a technical helper | Editing here needs some setup, see that folder's guide |
 | `assets/` | A copy of the pamphlet the website links to (leave this one alone) | Do not rename |
 
@@ -33,8 +33,7 @@ transcribed incorrectly or look altered.
 ### The `documents/` folder holds
 
 - **Pamphlet - A4 color (print this).pdf** - the final print file. Double-sided A4.
-- **Resolution - DRAFT.docx** - the resolution and report in Word (editable).
-- **Resolution - DRAFT.pdf** - the same resolution and report as a PDF (for reading and sharing).
+- **Resolution.pdf** - the resolution, report, and addenda as a PDF (for reading and sharing).
 
 ## Editing the website (no technical background needed)
 
