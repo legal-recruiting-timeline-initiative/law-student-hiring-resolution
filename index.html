@@ -65,11 +65,12 @@
 
   /* stat band */
   .band{background:var(--panel);border-bottom:1px solid var(--cream-line);}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);}
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);}
   .stat{padding:26px 16px;text-align:center;border-left:1px solid var(--line);}
   .stat:first-child{border-left:none;}
-  .stat .n{font-family:var(--serif);font-weight:700;font-size:40px;color:var(--navy);line-height:1;}
-  .stat .l{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:11px;line-height:1.4;}
+  .stat .n{font-family:var(--serif);font-weight:700;font-size:52px;color:var(--navy);line-height:1;}
+  .stat .l{font-family:var(--sans);font-size:14px;color:var(--muted);margin-top:11px;line-height:1.45;
+    max-width:34ch;margin-left:auto;margin-right:auto;}
 
   /* content */
   main{background:var(--panel);}
@@ -89,11 +90,6 @@
   .problem-list b{color:var(--navy);}
   p.lead-close{font-size:17px;line-height:1.55;color:#2c3746;margin:16px 0 0;padding-top:14px;
     border-top:1px solid var(--cream-line);}
-
-  .concerns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px 28px;margin-top:8px;}
-  .concern{padding-left:16px;border-left:2px solid var(--gold);}
-  .concern h3{font-family:var(--serif);font-weight:600;margin:0 0 5px;font-size:19px;color:var(--navy);}
-  .concern p{margin:0;font-size:15.5px;color:#3a4557;line-height:1.5;}
 
   .coalition{border:1px solid var(--cream-line);background:#faf6ec;border-radius:3px;
     padding:22px 24px;margin-top:6px;}
@@ -117,11 +113,10 @@
 
   @media(max-width:720px){
     .hero h1{font-size:32px;} .hero{padding:40px 0 36px;}
-    .stats{grid-template-columns:1fr 1fr;}
-    .stat:nth-child(3){border-left:none;}
-    .stat{border-top:1px solid var(--line);}
-    .stat:first-child,.stat:nth-child(2){border-top:none;}
-    .concerns{grid-template-columns:1fr;}
+    .stats{grid-template-columns:1fr;}
+    .stat{border-left:none;border-top:1px solid var(--line);}
+    .stat:first-child{border-top:none;}
+    .stat .n{font-size:44px;}
     .masthead .org{font-size:17px;}
     body{font-size:16px;}
   }
@@ -166,9 +161,7 @@
 <div class="band">
   <div class="wrap">
     <div class="stats">
-      <div class="stat"><div class="n">75%</div><div class="l">of surveyed students tie rising anxiety directly to recruiting pressure</div></div>
-      <div class="stat"><div class="n">85%</div><div class="l">of 2L summer offers now made before July of the 1L year, up from 34% a year earlier</div></div>
-      <div class="stat"><div class="n">25%</div><div class="l">of students knew these timelines before enrolling in law school</div></div>
+      <div class="stat"><div class="n">85%</div><div class="l">of 2L summer offers now made before July of the 1L year &mdash; up from 34% just one cycle earlier</div></div>
       <div class="stat"><div class="n">18</div><div class="l">law-school student governments asked the ABA to act</div></div>
     </div>
   </div>
@@ -181,31 +174,13 @@
       <span class="eyebrow">The problem</span>
       <h2>Why it matters</h2>
       <ul class="problem-list">
-        <li><b>Students report real harm.</b> A majority of surveyed Class of 2028 students say the accelerated timeline hurt them, and 75% tie rising anxiety directly to recruiting pressure.</li>
-        <li><b>The decision now comes almost immediately.</b> In a single cycle, the share of offers made before July rose from 34% to 85%; a majority now arrive before June, and some outreach starts around six weeks into law school.</li>
+        <li><b>For decades this happened in August, after 1L ended.</b> The decision now lands inside the first year &mdash; some outreach begins about six weeks in.</li>
         <li><b>Students commit before they&rsquo;re ready</b> &mdash; before their first grades, before legal writing is finished, before any clinic or elective.</li>
-        <li><b>No firm can slow down alone.</b> Whoever waits loses candidates to whoever moves first, so the calendar keeps sliding earlier every cycle.</li>
+        <li><b>75% tie rising anxiety directly to recruiting pressure</b>, and a majority of surveyed Class of 2028 students say the timeline hurt them.</li>
+        <li><b>Only 25% knew these timelines before enrolling</b> &mdash; a compressed calendar rewards students who already have networks.</li>
+        <li><b>Employers lose too</b> &mdash; they hire on less information about performance and interest, and no single firm can slow down alone.</li>
       </ul>
-      <p class="lead-close">Resolution 403 is the first step out: it asks the profession to study what this is doing, and to weigh students&rsquo; interests in its own recruiting.</p>
-    </section>
-
-    <section>
-      <span class="eyebrow">The case, in brief</span>
-      <h2>Three concerns, one modest response</h2>
-      <div class="concerns">
-        <div class="concern">
-          <h3>Student well-being</h3>
-          <p>Consequential career decisions now land before students sit for a single exam, deepening the anxiety already reshaping the first year.</p>
-        </div>
-        <div class="concern">
-          <h3>Equity and access</h3>
-          <p>Only 25% of students knew these timelines before enrolling &mdash; awareness concentrated among continuing-generation students and the most selective schools.</p>
-        </div>
-        <div class="concern">
-          <h3>Health of the hiring market</h3>
-          <p>Employers now hire on less information about performance and interest &mdash; a &ldquo;lose-lose-lose&rdquo; that no single party can solve alone.</p>
-        </div>
-      </div>
+      <p class="lead-close"><b>Resolution 403 is the first step out:</b> it asks the profession to study what this is doing, and to weigh students&rsquo; interests in its own recruiting.</p>
     </section>
 
     <section>
