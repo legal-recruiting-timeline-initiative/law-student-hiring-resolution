@@ -9,6 +9,8 @@ computer. If that is not you, hand this folder to a technical helper.
 
 - `pamphlet.html` - the pamphlet template. This is where the words, layout, and colors live.
 - `qr_site.png` - the QR code image embedded in the pamphlet.
+- `badc-logo.png` - the BADC seal shown in the pamphlet header. This is a copy of
+  `assets/cropped-BADC-Logo.png`; if the seal is ever replaced, update both files.
 - `render_pamphlet.py` - the script that turns `pamphlet.html` into a PDF.
 - `generate_qr.py` - the script that regenerates the QR code (only needed if the website
   address changes).

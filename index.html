@@ -33,10 +33,13 @@
 
   /* masthead */
   .masthead{background:var(--panel);border-bottom:3px solid var(--navy);}
-  .masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:12px 24px;padding:16px 24px;flex-wrap:wrap;}
+  .masthead .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;padding:14px 24px;flex-wrap:wrap;}
+  .masthead .brand{display:flex;align-items:center;gap:16px;}
+  .masthead .seal{width:64px;height:64px;flex:0 0 auto;display:block;}
   .masthead .wordmark{font-family:var(--sans);font-weight:700;font-size:14px;letter-spacing:.15em;
     text-transform:uppercase;color:var(--navy);}
-  .masthead .attr{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.03em;}
+  .masthead .attr{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.03em;
+    max-width:34ch;text-align:right;}
 
   /* hero */
   .hero{background:var(--navy);color:#fff;padding:52px 0 46px;
@@ -117,6 +120,8 @@
     .stat{border-left:none;border-top:1px solid var(--line);}
     .stat:first-child{border-top:none;}
     .stat .n{font-size:44px;}
+    .masthead .attr{text-align:left;max-width:none;}
+    .masthead .seal{width:54px;height:54px;}
     .masthead .org{font-size:17px;}
     body{font-size:16px;}
   }
@@ -133,7 +138,11 @@
 
 <header class="masthead">
   <div class="wrap">
-    <span class="wordmark">Law Student Hiring Cycle Resolution</span>
+    <span class="brand">
+      <img class="seal" src="assets/cropped-BADC-Logo.png"
+           alt="Seal of the Bar Association of the District of Columbia">
+      <span class="wordmark">Law Student Hiring Cycle Resolution</span>
+    </span>
     <span class="attr">Sponsored by the Bar Association of the District of Columbia, with a coalition of law schools</span>
   </div>
 </header>
