@@ -1,7 +1,7 @@
-# BADC / ABA Resolution: Let Law Students Become Law Students First
+# BADC / ABA Resolution: Law Student Hiring Cycle
 
 This is the home for everything in the Bar Association of the District of Columbia (BADC)
-campaign for a resolution before the ABA House of Delegates on accelerated law-firm
+campaign for **Resolution 403**, before the ABA House of Delegates, on accelerated law-firm
 recruiting timelines. It holds the live website, the printable pamphlet, the resolution
 draft, and the editable source files.
 
