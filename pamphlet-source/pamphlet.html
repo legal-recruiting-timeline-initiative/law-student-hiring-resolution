@@ -37,7 +37,7 @@
     border: 1.4pt solid #1c2a39; border-left: 7pt solid #b0883b;
     background: #faf6ec; padding: 12pt 15pt 11pt 15pt; margin-bottom: 9pt; border-radius: 2pt;
   }
-  .ask .kicker {
+  .kicker {
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-weight: 800;
     font-size: 9pt; letter-spacing: .13em; text-transform: uppercase; color: #8a6a2e; margin-bottom: 5pt;
   }
@@ -54,21 +54,30 @@
   .stat.gold { background: #8a6a2e; }
   .stat.gold .l { color: #ecdcc0; }
 
+  /* problem bullets */
+  .problem { margin-bottom: 9pt; }
+  .problem ul { margin: 0; padding-left: 15pt; }
+  .problem li { font-size: 10.2pt; line-height: 1.34; margin-bottom: 3pt; }
+  .problem li:last-child { margin-bottom: 0; }
+  .problem .tie {
+    margin: 5pt 0 0 0; font-size: 10.6pt; line-height: 1.3; font-weight: 800; color: #1c2a39;
+    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
   h2.section {
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-size: 9.6pt;
     letter-spacing: .11em; text-transform: uppercase; color: #8a6a2e;
     border-bottom: 1pt solid #d9cfba; padding-bottom: 4pt; margin: 0 0 8pt 0; font-weight: 800;
   }
 
-  /* concerns as 2x2 grid */
-  .concerns { display: flex; flex-wrap: wrap; gap: 9pt 18pt; margin-bottom: 9pt; }
-  .concern { flex: 0 0 calc(50% - 9pt); }
+  /* concerns as one row of three */
+  .concerns { display: flex; gap: 14pt; margin-bottom: 9pt; }
+  .concern { flex: 1; }
   .concern .h {
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-weight: 800;
     font-size: 10.2pt; color: #1c2a39;
   }
-  .concern .h .num { color: #b0883b; }
-  .concern p { margin: 2pt 0 0 0; font-size: 10pt; line-height: 1.34; }
+  .concern p { margin: 2pt 0 0 0; font-size: 9.8pt; line-height: 1.34; }
 
   /* credibility */
   .cred { background: #faf6ec; border: 1pt solid #d9cfba; border-radius: 3pt; padding: 10pt 14pt; margin-bottom: 9pt; }
@@ -110,28 +119,33 @@
 </div>
 
 <div class="stats">
-  <div class="stat"><span class="n">85%</span><span class="l">of 2L summer offers now made before July of the 1L year, up from 34% a year earlier</span></div>
-  <div class="stat gold"><span class="n">80%</span><span class="l">of offers now come through employer-sponsored recruiting, not on-campus interviews</span></div>
-  <div class="stat"><span class="n">18</span><span class="l">law-school student governments asked the ABA to act</span></div>
+  <div class="stat gold"><span class="n">97%</span><span class="l">of 2L summer associates get an offer to return full-time &mdash; that&rsquo;s the career</span></div>
+  <div class="stat"><span class="n">85%</span><span class="l">of offers now made before July of 1L, up from 34% a year earlier</span></div>
+  <div class="stat"><span class="n">18</span><span class="l">law schools asked the ABA to act</span></div>
 </div>
 
-<h2 class="section">Four concerns, one modest response</h2>
+<div class="problem">
+  <div class="kicker">Why it matters</div>
+  <ul>
+    <li>Students now commit to a firm before their first grades, before legal writing is finished, before any clinic or elective.</li>
+    <li>No single firm can slow down alone &mdash; whoever waits loses candidates to whoever moves first.</li>
+  </ul>
+  <p class="tie">Resolution 403 is the first step out.</p>
+</div>
+
+<h2 class="section">Three concerns, one modest response</h2>
 <div class="concerns">
   <div class="concern">
-    <div class="h"><span class="num">1.</span> Integrity of the first year.</div>
-    <p>The 1L year builds a lawyer's analytical, ethical, and professional foundation. When recruiting begins in week one, employer activity, not pedagogy, drives the calendar.</p>
+    <div class="h">Student well-being.</div>
+    <p>75% of surveyed students tie rising anxiety directly to recruiting pressure.</p>
   </div>
   <div class="concern">
-    <div class="h"><span class="num">2.</span> Student well-being.</div>
-    <p>Seventy-five percent of surveyed students tie increased anxiety directly to recruiting pressure, and a majority of surveyed Class of 2028 students report a negative impact.</p>
+    <div class="h">Equity and access.</div>
+    <p>Only 25% of students knew these timelines before enrolling.</p>
   </div>
   <div class="concern">
-    <div class="h"><span class="num">3.</span> Equity and access.</div>
-    <p>Only 25% of students knew these timelines before enrolling. A compressed calendar rewards pre-existing networks and disadvantages first-generation students.</p>
-  </div>
-  <div class="concern">
-    <div class="h"><span class="num">4.</span> Health of the hiring market.</div>
-    <p>Employers now hire on less information about performance and interest. Commentators call it a &ldquo;lose-lose-lose&rdquo; that no single party can solve alone.</p>
+    <div class="h">Hiring-market health.</div>
+    <p>Employers hire on less information &mdash; a &ldquo;lose-lose-lose&rdquo; no one can fix alone.</p>
   </div>
 </div>
 

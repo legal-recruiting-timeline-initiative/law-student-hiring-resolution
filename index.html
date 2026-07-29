@@ -82,7 +82,15 @@
     text-transform:uppercase;color:var(--gold-deep);margin-bottom:6px;}
   p.lead{font-size:18px;line-height:1.62;color:#2c3746;margin:0;}
 
-  .concerns{display:grid;grid-template-columns:1fr 1fr;gap:22px 34px;margin-top:8px;}
+  .problem-list{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:13px;}
+  .problem-list li{position:relative;padding-left:24px;font-size:17px;line-height:1.5;color:#2c3746;}
+  .problem-list li::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;
+    background:var(--gold);border-radius:1px;}
+  .problem-list b{color:var(--navy);}
+  p.lead-close{font-size:17px;line-height:1.55;color:#2c3746;margin:16px 0 0;padding-top:14px;
+    border-top:1px solid var(--cream-line);}
+
+  .concerns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px 28px;margin-top:8px;}
   .concern{padding-left:16px;border-left:2px solid var(--gold);}
   .concern h3{font-family:var(--serif);font-weight:600;margin:0 0 5px;font-size:19px;color:var(--navy);}
   .concern p{margin:0;font-size:15.5px;color:#3a4557;line-height:1.5;}
@@ -158,8 +166,8 @@
 <div class="band">
   <div class="wrap">
     <div class="stats">
-      <div class="stat"><div class="n">85%</div><div class="l">of 2L summer offers now made before July of the 1L year, up from 34% a year earlier</div></div>
-      <div class="stat"><div class="n">80%</div><div class="l">of offers now come through employer-sponsored recruiting, not on-campus interviews</div></div>
+      <div class="stat"><div class="n">97%</div><div class="l">of 2L summer associates get an offer to return full-time &mdash; the summer job <em>is</em> the career</div></div>
+      <div class="stat"><div class="n">85%</div><div class="l">of those offers now made before July of the 1L year, up from 34% a year earlier</div></div>
       <div class="stat"><div class="n">25%</div><div class="l">of students knew these timelines before enrolling in law school</div></div>
       <div class="stat"><div class="n">18</div><div class="l">law-school student governments asked the ABA to act</div></div>
     </div>
@@ -172,28 +180,30 @@
     <section>
       <span class="eyebrow">The problem</span>
       <h2>Why it matters</h2>
-      <p class="lead">Since 2024, hiring for the largest sectors of private practice has moved into the first semester of the first year, and sometimes the first weeks. Students now make career-defining choices before they have learned to read a case, take a cold call, or sit for a single exam. A majority of surveyed Class of 2028 students report that this timing harmed them, and three in four surveyed students tie rising anxiety directly to recruiting pressure. The change also narrows access: students with family or industry connections navigate the compressed calendar far more easily than first-generation students, who report the lowest awareness of these timelines before they enroll. Giving the first year room to breathe means better-prepared students, better-matched hires, and classrooms that can teach again.</p>
+      <ul class="problem-list">
+        <li><b>The 2L summer job is the career.</b> 97% of second-year summer associates receive an offer to return as a full-time associate &mdash; so that summer hiring decision is, in practice, the hiring decision.</li>
+        <li><b>That decision has moved into the first year.</b> In a single cycle, the share of offers made before July rose from 34% to 85%; a majority now arrive before June, and some outreach starts around six weeks into law school.</li>
+        <li><b>Students commit before they&rsquo;re ready</b> &mdash; before their first grades, before legal writing is finished, before any clinic or elective.</li>
+        <li><b>No firm can slow down alone.</b> Whoever waits loses candidates to whoever moves first, so the calendar keeps sliding earlier every cycle.</li>
+      </ul>
+      <p class="lead-close">Resolution 403 is the first step out: it asks the profession to study what this is doing, and to weigh students&rsquo; interests in its own recruiting.</p>
     </section>
 
     <section>
       <span class="eyebrow">The case, in brief</span>
-      <h2>Four concerns, one modest response</h2>
+      <h2>Three concerns, one modest response</h2>
       <div class="concerns">
         <div class="concern">
-          <h3>Integrity of the first year</h3>
-          <p>The 1L year builds a lawyer's analytical, ethical, and professional foundation. When recruiting begins in week one, employer activity, not pedagogy, drives the calendar.</p>
-        </div>
-        <div class="concern">
           <h3>Student well-being</h3>
-          <p>Students face professionally consequential decisions before their first exam. Seventy-five percent of surveyed students attribute increased anxiety specifically to recruiting pressure.</p>
+          <p>Students decide before their first exam. 75% of surveyed students tie rising anxiety directly to recruiting pressure.</p>
         </div>
         <div class="concern">
           <h3>Equity and access</h3>
-          <p>Only 25% of students knew these timelines before enrolling, and that awareness concentrated among continuing-generation graduates and the most selective schools.</p>
+          <p>Only 25% of students knew these timelines before enrolling &mdash; awareness concentrated among continuing-generation students and the most selective schools.</p>
         </div>
         <div class="concern">
           <h3>Health of the hiring market</h3>
-          <p>Employers now hire on less information about performance and interest. Commentators call it a &ldquo;lose-lose-lose&rdquo; that no single party can solve alone.</p>
+          <p>Employers now hire on less information about performance and interest &mdash; a &ldquo;lose-lose-lose&rdquo; that no single party can solve alone.</p>
         </div>
       </div>
     </section>
